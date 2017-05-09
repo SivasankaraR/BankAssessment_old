@@ -16,8 +16,14 @@ public class App {
 
 	public Account getAccountDetailsByID(int id){
 		Account acc=null;
-		return acc;
+		for(Account a:accounts){
+			if(a.getAccountID()==id){
+				acc=a;
+			}
+		}             
+		return acc;                         
 	}
+
 	
 	public List<Account> getAccountDetailsByBalance(double amount){	
 		List<Account> dummylist=new ArrayList<Account>();
